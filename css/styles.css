@@ -1,0 +1,17 @@
+#review {
+  display: none;
+  background-color: #efefef;
+  padding: 10px;
+}
+
+#emptyForm p {
+  padding-top: 10px;
+}
+
+form {
+  padding-left: 10px;
+}
+
+#match{
+  display: none;
+}
