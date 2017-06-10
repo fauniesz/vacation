@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var yes = parseInt(prompt("ARE YOU READY TO FIND YOUR DREAM VACATION? (just type yes)"));
   $("#blanks form").submit(function(event) {
     var firstNameInput = $("input#firstName").val();
     var lastNameInput = $("input#lastName").val();
@@ -12,25 +13,30 @@ $(document).ready(function() {
     $(".hobby").text(hobbyInput);
     $(".weather").text(weatherInput);
 
-    $("#review").show();
+    $("#confirmation").show();
     $("#emptyForm").hide();
     event.preventDefault();
 
+    $("#match").show();
+    $("#emptyForm").hide();
+    event.preventDefault();
+
+
+    var hobby = parseInt($("input#hobby").val());
+    var weather = $("select#weather").val();
+    if (weather === 'Snow' && hobby === Skiing) {
+      match = 'Vail, Colorado';
+    }
+    if (hobby === 'Reading' && weather === Rain) {
+      match = 'Portland, Oregon';
+    }
+    if (hobby === 'Surfing' && weather === Sunshine) {
+      match = 'Hawaii';
+    }
+
+    $("#result").empty().append(match);
+    $("#match").show()
+
+
   });
 });
-
-   var age = parseInt($("input#age").val());
-   var gender = $("select#gender").val();
-   var match = 'Justin Timberlake';
-   if (hobby === 'sking' && weather === snow) {
-     match = 'Vail, Colorado';
-   }
-   if (gender === 'female' && age >= 30) {
-     match = 'Nicole Kidman';
-   }
-   if (gender === 'female' && age < 30) {
-     match = 'Miley Cyrus';
-   }
-
-   $("#result").empty().append(match);
-   $("#match").show()
