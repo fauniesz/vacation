@@ -24,13 +24,13 @@ $(document).ready(function() {
 
     var hobby = parseInt($("input#hobby").val());
     var weather = $("select#weather").val();
-    if (weather === 'Snow' && hobby === Skiing) {
+    if (weather === 'Snow' && hobby === "Skiing") {
       match = 'Vail, Colorado';
     }
-    if (hobby === 'Reading' && weather === Rain) {
+    if (hobby === 'Reading' && weather === "Rain") {
       match = 'Portland, Oregon';
     }
-    if (hobby === 'Surfing' && weather === Sunshine) {
+    if (hobby === 'Surfing' && weather === "Sunshine") {
       match = 'Hawaii';
     }
 
